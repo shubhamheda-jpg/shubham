@@ -7,18 +7,18 @@
   <meta name="description" content="Buy Mini Centrefeed Rolls 1ply White (12x126m). Food-safe, CHSA accredited hygiene rolls ideal for kitchens, healthcare, and government institutions.">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-    .container { width: 90%; max-width: 1200px; margin: auto; padding: 20px; }
+    .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px; }
     .breadcrumbs { font-size: 0.9em; margin-bottom: 10px; color: #555; }
-    .product-page { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-    .product-images img { width: 100%; max-width: 1000px; border: 1px solid #ddd; border-radius: 8px; }
+    .product-page { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
+    .product-images img { width: 100%; border: 1px solid #ddd; border-radius: 8px; }
     .product-title { font-size: 1.8em; font-weight: bold; margin-bottom: 10px; }
     .subtitle { font-size: 1.1em; color: #666; margin-bottom: 20px; }
-    .usp-bar { display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+    .usp-bar { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
     .usp { background: #f7f7f7; padding: 10px 15px; border-radius: 5px; font-size: 0.95em; flex: 1; text-align: center; min-width: 120px; }
     .price { font-size: 1.6em; color: #004080; font-weight: bold; margin-bottom: 10px; }
     .sku { margin-bottom: 15px; font-size: 0.95em; color: #666; }
 
-    /* Action buttons redesigned */
+    /* CTA Buttons */
     .cta { margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap; }
     .cta-primary { background: #004080; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; flex: 1; text-align: center; }
     .cta-primary:hover { background: #0066cc; }
@@ -30,7 +30,7 @@
     .cta-dropdown-content a:hover { background: #f9f9f9; }
     .cta-dropdown:hover .cta-dropdown-content { display: block; }
 
-    /* Accordion styles */
+    /* Accordion */
     .accordion { margin-top: 40px; border-top: 1px solid #ddd; }
     .accordion-item { border-bottom: 1px solid #ddd; }
     .accordion-header { cursor: pointer; padding: 15px; font-weight: bold; background: #f9f9f9; display: flex; justify-content: space-between; align-items: center; }
@@ -39,86 +39,38 @@
     .accordion-header span { font-weight: bold; font-size: 1.2em; }
     .accordion-item.active .accordion-content { display: block; }
 
-    /* B2B tools redesign */
-    .b2b-tools { margin-top: 40px; background: #f7f7f7; padding: 20px; border-radius: 8px; }
-    .b2b-tools h2 { margin-bottom: 15px; font-size: 1.3em; }
-    .b2b-grid { display: flex; gap: 20px; flex-wrap: wrap; }
-    .b2b-card { background: #fff; border: 1px solid #ddd; border-radius: 6px; flex: 1; min-width: 220px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-    .b2b-card a { text-decoration: none; color: #004080; font-weight: bold; display: block; }
-    .b2b-card a:hover { text-decoration: underline; }
+    /* Reviews */
+    .reviews { margin-top: 50px; }
+    .reviews h2 { font-size: 1.4em; margin-bottom: 15px; }
+    .review { border: 1px solid #ddd; padding: 15px; border-radius: 6px; margin-bottom: 12px; background: #fafafa; }
+    .review strong { color: #004080; }
+    .stars { color: #f5a623; margin-right: 6px; }
 
-    /* Related Products */
-    .related-products { margin-top: 40px; }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .related-card { border: 1px solid #ddd; border-radius: 6px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); background: #fff; }
-    .related-card img { max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 10px; }
-    .related-card h3 { font-size: 1em; margin: 10px 0; }
-    .related-card .price { font-size: 1.1em; color: #004080; font-weight: bold; margin-bottom: 10px; }
-    .related-card button { background: #004080; color: #fff; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 0.9em; }
-    .related-card button:hover { background: #0066cc; }
-    /* Responsive: Mobile tweaks */
+    /* Responsive */
     @media (max-width: 768px) {
       .container { width: 94%; padding: 12px; }
       .product-page { grid-template-columns: 1fr; gap: 20px; }
-      .product-title { font-size: 1.4em; }
-      .subtitle { font-size: 1em; }
       .usp-bar { flex-direction: column; gap: 10px; }
-      .usp { min-width: auto; text-align: left; }
-      .price { font-size: 1.3em; }
-      .sku { font-size: 0.9em; }
       .cta { flex-direction: column; gap: 10px; }
       .cta-primary, .cta-secondary { width: 100%; }
-      .accordion-header { padding: 14px; font-size: 1em; }
-      .accordion-content { padding: 12px; }
-      .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-      .related-card { padding: 12px; }
-      .related-card h3 { font-size: 0.95em; }
-      .related-card .price { font-size: 1em; }
+      .related-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     }
 
     @media (max-width: 420px) {
-      .product-title { font-size: 1.25em; }
-      .price { font-size: 1.15em; }
+      .product-title { font-size: 1.3em; }
+      .price { font-size: 1.1em; }
       .related-grid { grid-template-columns: 1fr; }
     }
-    /* Reviews styling */
-    .review-summary { margin-bottom: 10px; font-size: 1.05rem; }
-    .review { border-bottom: 1px solid #eee; padding: 10px 0; }
-    .review p { margin: 4px 0; }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Mini Centrefeed Rolls 1ply White – 12x126m",
-    "sku": "121502",
-    "image": [
-      "121.502.jpg"
-    ],
-    "description": "Food-safe CHSA accredited hygiene paper rolls for commercial use.",
-    "brand": {"@type": "Brand", "name": "Unbranded"},
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "GBP",
-      "price": "26.53",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.6",
-      "reviewCount": "28"
-    }
-  }
-  </script>
 </head>
 <body>
   <div class="container">
     <div class="breadcrumbs">Home → Cleaning & Hygiene → Hygiene Paper → Centrefeed Rolls</div>
 
     <div class="product-page">
-      <!-- Product Images -->
+      <!-- Product Image -->
       <div class="product-images">
-        <img src="placeholder-1000x1000.png" alt="Mini Centrefeed Rolls 1ply White bulk hygiene paper" />
+        <img src="121.502.jpg" alt="Mini Centrefeed Rolls 1ply White bulk hygiene paper" />
       </div>
 
       <!-- Product Details -->
@@ -126,7 +78,6 @@
         <div class="product-title">Mini Centrefeed Rolls 1ply White – 12x126m</div>
         <div class="subtitle">Food-Safe CHSA Accredited Hygiene Paper for Commercial Use</div>
 
-        <!-- USP bar -->
         <div class="usp-bar">
           <div class="usp">✔ Made in the UK</div>
           <div class="usp">✔ Food Safe Certified</div>
@@ -150,26 +101,17 @@
       </div>
     </div>
 
-    <!-- Accordion Section -->
+    <!-- Accordion -->
     <div class="accordion">
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
-          Description <span>+</span>
-        </div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Description <span>+</span></div>
         <div class="accordion-content">
-          <p>
-            The Mini Centrefeed Rolls 1ply White (12x126m) are a cost-effective, hygienic solution for
-            commercial environments such as kitchens, salons, schools, hospitals, and government institutions.
-            Produced in the UK and accredited by CHSA, these rolls are food-safe, highly absorbent, and easy to tear.
-            Each case contains 12 rolls, shrink-wrapped for protection and suitable for most mini centrefeed dispensers.
-          </p>
+          <p>The Mini Centrefeed Rolls 1ply White (12x126m) are a cost-effective, hygienic solution for kitchens, salons, schools, hospitals, and government institutions. Produced in the UK and CHSA accredited, these rolls are food-safe, highly absorbent, and easy to tear.</p>
         </div>
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
-          Features <span>+</span>
-        </div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Features <span>+</span></div>
         <div class="accordion-content">
           <ul>
             <li>Manufactured in the UK</li>
@@ -182,9 +124,7 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
-          Specifications <span>+</span>
-        </div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Specifications <span>+</span></div>
         <div class="accordion-content">
           <table>
             <tr><th>UNSPSC Code</th><td>14111703</td></tr>
@@ -197,60 +137,22 @@
           </table>
         </div>
       </div>
-      <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
-          Reviews <span class="symbol">+</span>
-        </div>
-        <div class="accordion-content">
-          <div class="review-summary"><strong>★ 4.6 / 5</strong> (28 reviews)</div>
-          <div class="review">
-            <p><strong>Jane D.</strong> – ★★★★★</p>
-            <p>“Excellent quality rolls, very absorbent and perfect for our kitchen.”</p>
-          </div>
-          <div class="review">
-            <p><strong>Mark S.</strong> – ★★★★☆</p>
-            <p>“Good value for money. Would recommend, though delivery was a day late.”</p>
-          </div>
-          <a href="#">Read all reviews →</a>
-        </div>
-      </div>
     </div>
 
-    <!-- B2B Tools -->
-    <div class="b2b-tools">
-      <h2>B2B Resources</h2>
-      <div class="b2b-grid">
-        <div class="b2b-card">
-          <a href="#">Download Product Datasheet (PDF)</a>
-        </div>
-        <div class="b2b-card">
-          <a href="#">View Compliance Certificates</a>
-        </div>
+    <!-- Reviews -->
+    <div class="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="review">
+        <div><span class="stars">★★★★★</span><strong>John D.</strong></div>
+        <p>Great quality rolls, very strong and absorbent. Perfect for our café kitchen!</p>
       </div>
-    </div>
-
-    <!-- Related Products -->
-    <div class="related-products">
-      <h2>Related Products</h2>
-      <div class="related-grid">
-        <div class="related-card">
-          <img src="placeholder-220x220.png" alt="2ply Centrefeed Rolls" />
-          <h3>2ply Centrefeed Rolls – 6x150m</h3>
-          <div class="price">£18.99 / Case</div>
-          <button>Add to Basket</button>
-        </div>
-        <div class="related-card">
-          <img src="placeholder-220x220.png" alt="Mini Centrefeed Dispenser" />
-          <h3>Mini Centrefeed Dispenser – White</h3>
-          <div class="price">£12.50 each</div>
-          <button>Add to Basket</button>
-        </div>
-        <div class="related-card">
-          <img src="placeholder-220x220.png" alt="Blue Centrefeed Rolls" />
-          <h3>Blue Centrefeed Rolls 1ply – 6x300m</h3>
-          <div class="price">£22.75 / Case</div>
-          <button>Add to Basket</button>
-        </div>
+      <div class="review">
+        <div><span class="stars">★★★★☆</span><strong>Sarah K.</strong></div>
+        <p>Good price and reliable delivery. Would recommend for any business.</p>
+      </div>
+      <div class="review">
+        <div><span class="stars">★★★★★</span><strong>Mark L.</strong></div>
+        <p>We order these in bulk every month for our hospital – never had an issue.</p>
       </div>
     </div>
   </div>

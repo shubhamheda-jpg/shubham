@@ -1,65 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mini Centrefeed Rolls 1ply White – Bulk Hygiene Paper</title>
   <meta name="description" content="Buy Mini Centrefeed Rolls 1ply White (12x126m). Food-safe, CHSA accredited hygiene rolls ideal for kitchens, healthcare, and government institutions.">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-    .container { width: 90%; max-width: 1100px; margin: auto; padding: 20px; }
-    .breadcrumbs { font-size: 0.9em; margin-bottom: 10px; color: #555; }
-    .product-page { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
-    .product-images img { width: 100%; border: 1px solid #ddd; border-radius: 8px; }
-    .product-title { font-size: 1.8em; font-weight: bold; margin-bottom: 10px; }
-    .subtitle { font-size: 1.1em; color: #666; margin-bottom: 20px; }
-    .usp-bar { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
-    .usp { background: #f7f7f7; padding: 10px 15px; border-radius: 5px; font-size: 0.95em; flex: 1; text-align: center; min-width: 120px; }
-    .price { font-size: 1.6em; color: #004080; font-weight: bold; margin-bottom: 10px; }
-    .sku { margin-bottom: 15px; font-size: 0.95em; color: #666; }
-
-    /* CTA Buttons */
-    .cta { margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap; }
-    .cta-primary { background: #004080; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; flex: 1; text-align: center; }
-    .cta-primary:hover { background: #0066cc; }
-    .cta-dropdown { position: relative; }
-    .cta-secondary { background: #004080; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; }
-    .cta-dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid #ddd; min-width: 200px; z-index: 10; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-    .cta-dropdown-content a { display: block; padding: 12px; text-decoration: none; color: #004080; font-size: 0.95em; border-bottom: 1px solid #eee; }
-    .cta-dropdown-content a:last-child { border-bottom: none; }
-    .cta-dropdown-content a:hover { background: #f9f9f9; }
-    .cta-dropdown:hover .cta-dropdown-content { display: block; }
-
-    /* Accordion */
-    .accordion { margin-top: 40px; border-top: 1px solid #ddd; }
-    .accordion-item { border-bottom: 1px solid #ddd; }
-    .accordion-header { cursor: pointer; padding: 15px; font-weight: bold; background: #f9f9f9; display: flex; justify-content: space-between; align-items: center; }
-    .accordion-header:hover { background: #f1f1f1; }
-    .accordion-content { display: none; padding: 15px; background: #fff; }
-    .accordion-header span { font-weight: bold; font-size: 1.2em; }
-    .accordion-item.active .accordion-content { display: block; }
-
-    /* Reviews */
-    .reviews { margin-top: 50px; }
-    .reviews h2 { font-size: 1.4em; margin-bottom: 15px; }
-    .review { border: 1px solid #ddd; padding: 15px; border-radius: 6px; margin-bottom: 12px; background: #fafafa; }
-    .review strong { color: #004080; }
-    .stars { color: #f5a623; margin-right: 6px; }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .container { width: 94%; padding: 12px; }
-      .product-page { grid-template-columns: 1fr; gap: 20px; }
-      .usp-bar { flex-direction: column; gap: 10px; }
-      .cta { flex-direction: column; gap: 10px; }
-      .cta-primary, .cta-secondary { width: 100%; }
-      .related-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    :root{
+      --brand:#004080; --brand-hover:#0066cc; --text:#333; --muted:#666;
+      --border:#ddd; --bg:#fff; --bg-soft:#f7f7f7;
     }
+    *{box-sizing:border-box}
+    body{font-family:Arial,sans-serif;margin:0;color:var(--text);line-height:1.6;background:var(--bg)}
+    .container{width:90%;max-width:1200px;margin:auto;padding:20px}
+    .breadcrumbs{font-size:.9rem;margin-bottom:10px;color:#555}
 
-    @media (max-width: 420px) {
-      .product-title { font-size: 1.3em; }
-      .price { font-size: 1.1em; }
-      .related-grid { grid-template-columns: 1fr; }
+    /* layout */
+    .product-page{display:grid;grid-template-columns:40% 60%;gap:30px;align-items:start}
+    .product-images{text-align:center}
+    .product-images img{width:100%;max-width:480px;height:auto;object-fit:contain;background:#fff;border:1px solid var(--border);border-radius:8px;display:inline-block}
+
+    .product-title{font-size:1.8rem;font-weight:700;margin:0 0 10px}
+    .subtitle{font-size:1.05rem;color:var(--muted);margin:0 0 20px}
+    .usp-bar{display:flex;gap:12px;margin:0 0 20px;flex-wrap:wrap}
+    .usp{background:#f7f7f7;padding:10px 12px;border-radius:6px;font-size:.95rem}
+    .price{font-size:1.6rem;color:var(--brand);font-weight:700;margin:0 0 8px}
+    .sku{margin:0 0 15px;font-size:.95rem;color:var(--muted)}
+
+    .cta{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap}
+    .cta-primary,.cta-secondary{background:var(--brand);color:#fff;padding:12px 18px;border:0;border-radius:6px;font-size:1rem;cursor:pointer}
+    .cta-primary{flex:1;text-align:center}
+    .cta-primary:hover,.cta-secondary:hover{background:var(--brand-hover)}
+    .cta-dropdown{position:relative}
+    .cta-dropdown-content{display:none;position:absolute;top:calc(100% + 6px);left:0;background:#fff;border:1px solid var(--border);min-width:200px;z-index:20;box-shadow:0 8px 20px rgba(0,0,0,.08);border-radius:6px;overflow:hidden}
+    .cta-dropdown-content a{display:block;padding:12px 14px;text-decoration:none;color:var(--brand);font-size:.95rem;border-bottom:1px solid #eee}
+    .cta-dropdown-content a:last-child{border-bottom:0}
+    .cta-dropdown:hover .cta-dropdown-content{display:block}
+
+    /* accordion */
+    .accordion{margin-top:36px;border-top:1px solid var(--border)}
+    .accordion-item{border-bottom:1px solid var(--border)}
+    .accordion-header{cursor:pointer;padding:15px;font-weight:700;background:#f9f9f9;display:flex;justify-content:space-between;align-items:center}
+    .accordion-header .symbol{font-weight:700;font-size:1.1rem}
+    .accordion-header:hover{background:#f1f1f1}
+    .accordion-content{display:none;padding:15px;background:#fff}
+    .accordion-item.active .accordion-content{display:block}
+
+    /* reviews inside accordion */
+    .review-summary{margin-bottom:10px;font-size:1.05rem}
+    .review{border-bottom:1px solid #eee;padding:10px 0}
+    .review p{margin:4px 0}
+    .stars{color:#f5a623;margin-right:6px}
+
+    /* B2B tools & related */
+    .b2b-tools{margin-top:40px;background:var(--bg-soft);padding:20px;border-radius:8px}
+    .b2b-tools h2{margin:0 0 14px;font-size:1.25rem}
+    .b2b-grid{display:flex;gap:16px;flex-wrap:wrap}
+    .b2b-card{background:#fff;border:1px solid var(--border);border-radius:6px;flex:1;min-width:220px;padding:15px;text-align:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+    .b2b-card a{text-decoration:none;color:var(--brand);font-weight:700;display:block}
+    .b2b-card a:hover{text-decoration:underline}
+
+    .related-products{margin-top:40px}
+    .related-products h2{margin:0 0 14px}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .related-card{border:1px solid var(--border);border-radius:6px;padding:15px;text-align:center;box-shadow:0 2px 4px rgba(0,0,0,.05);background:#fff}
+    .related-card img{max-width:100%;height:auto;border-radius:4px;margin-bottom:10px;display:block}
+    .related-card h3{font-size:1rem;margin:10px 0}
+    .related-card .price{font-size:1.1rem;color:var(--brand);font-weight:700;margin-bottom:10px}
+    .related-card button{background:var(--brand);color:#fff;border:none;padding:10px 15px;border-radius:4px;cursor:pointer;font-size:.95rem}
+    .related-card button:hover{background:var(--brand-hover)}
+
+    /* responsive */
+    @media (max-width:900px){ .product-page{grid-template-columns:45% 55%} }
+    @media (max-width:768px){
+      .container{width:94%;padding:12px}
+      .product-page{grid-template-columns:1fr;gap:20px}
+      .product-title{font-size:1.4rem}
+      .subtitle{font-size:1rem}
+      .usp-bar{flex-direction:column;gap:10px}
+      .usp{text-align:left}
+      .price{font-size:1.3rem}
+      .sku{font-size:.9rem}
+      .cta{flex-direction:column;gap:10px}
+      .cta-primary,.cta-secondary{width:100%}
+      .accordion-header{padding:14px;font-size:1rem}
+      .accordion-content{padding:12px}
+      .related-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+      .related-card{padding:12px}
+    }
+    @media (max-width:420px){
+      .product-title{font-size:1.25rem}
+      .price{font-size:1.1rem}
+      .related-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -68,15 +100,15 @@
     <div class="breadcrumbs">Home → Cleaning & Hygiene → Hygiene Paper → Centrefeed Rolls</div>
 
     <div class="product-page">
-      <!-- Product Image -->
+      <!-- left: image -->
       <div class="product-images">
-        <img src="121.502.jpg" alt="Mini Centrefeed Rolls 1ply White bulk hygiene paper" />
+        <img src="121.502.jpg" alt="Mini Centrefeed Rolls 1ply White – bulk hygiene paper" />
       </div>
 
-      <!-- Product Details -->
+      <!-- right: details -->
       <div>
-        <div class="product-title">Mini Centrefeed Rolls 1ply White – 12x126m</div>
-        <div class="subtitle">Food-Safe CHSA Accredited Hygiene Paper for Commercial Use</div>
+        <h1 class="product-title">Mini Centrefeed Rolls 1ply White – 12x126m</h1>
+        <p class="subtitle">Food-Safe CHSA Accredited Hygiene Paper for Commercial Use</p>
 
         <div class="usp-bar">
           <div class="usp">✔ Made in the UK</div>
@@ -101,17 +133,25 @@
       </div>
     </div>
 
-    <!-- Accordion -->
+    <!-- Accordion (reviews now inside as item #4) -->
     <div class="accordion">
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Description <span>+</span></div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+          Description <span class="symbol">+</span>
+        </div>
         <div class="accordion-content">
-          <p>The Mini Centrefeed Rolls 1ply White (12x126m) are a cost-effective, hygienic solution for kitchens, salons, schools, hospitals, and government institutions. Produced in the UK and CHSA accredited, these rolls are food-safe, highly absorbent, and easy to tear.</p>
+          <p>
+            The Mini Centrefeed Rolls 1ply White (12x126m) are a cost-effective, hygienic solution for
+            kitchens, salons, schools, hospitals, and government institutions. Produced in the UK and
+            CHSA accredited, these rolls are food-safe, highly absorbent, and easy to tear.
+          </p>
         </div>
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Features <span>+</span></div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+          Features <span class="symbol">+</span>
+        </div>
         <div class="accordion-content">
           <ul>
             <li>Manufactured in the UK</li>
@@ -124,7 +164,9 @@
       </div>
 
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Specifications <span>+</span></div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+          Specifications <span class="symbol">+</span>
+        </div>
         <div class="accordion-content">
           <table>
             <tr><th>UNSPSC Code</th><td>14111703</td></tr>
@@ -137,22 +179,61 @@
           </table>
         </div>
       </div>
+
+      <!-- Reviews inside accordion -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+          Reviews <span class="symbol">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="review-summary"><strong>★ 4.6 / 5</strong> (28 reviews)</div>
+          <div class="review">
+            <p><strong>John D.</strong> – <span class="stars">★★★★★</span></p>
+            <p>Great quality rolls, very strong and absorbent. Perfect for our café kitchen!</p>
+          </div>
+          <div class="review">
+            <p><strong>Sarah K.</strong> – <span class="stars">★★★★☆</span></p>
+            <p>Good price and reliable delivery. Would recommend for any business.</p>
+          </div>
+          <div class="review">
+            <p><strong>Mark L.</strong> – <span class="stars">★★★★★</span></p>
+            <p>We order these in bulk every month for our hospital – never had an issue.</p>
+          </div>
+          <a href="#">Read all reviews →</a>
+        </div>
+      </div>
     </div>
 
-    <!-- Reviews -->
-    <div class="reviews">
-      <h2>Customer Reviews</h2>
-      <div class="review">
-        <div><span class="stars">★★★★★</span><strong>John D.</strong></div>
-        <p>Great quality rolls, very strong and absorbent. Perfect for our café kitchen!</p>
+    <!-- Below the accordion -->
+    <div class="b2b-tools">
+      <h2>B2B Resources</h2>
+      <div class="b2b-grid">
+        <div class="b2b-card"><a href="#">Download Product Datasheet (PDF)</a></div>
+        <div class="b2b-card"><a href="#">View Compliance Certificates</a></div>
       </div>
-      <div class="review">
-        <div><span class="stars">★★★★☆</span><strong>Sarah K.</strong></div>
-        <p>Good price and reliable delivery. Would recommend for any business.</p>
-      </div>
-      <div class="review">
-        <div><span class="stars">★★★★★</span><strong>Mark L.</strong></div>
-        <p>We order these in bulk every month for our hospital – never had an issue.</p>
+    </div>
+
+    <div class="related-products">
+      <h2>Related Products</h2>
+      <div class="related-grid">
+        <div class="related-card">
+          <img src="placeholder-220x220.png" alt="2ply Centrefeed Rolls" loading="lazy" width="220" height="220" />
+          <h3>2ply Centrefeed Rolls – 6x150m</h3>
+          <div class="price">£18.99 / Case</div>
+          <button>Add to Basket</button>
+        </div>
+        <div class="related-card">
+          <img src="placeholder-220x220.png" alt="Mini Centrefeed Dispenser" loading="lazy" width="220" height="220" />
+          <h3>Mini Centrefeed Dispenser – White</h3>
+          <div class="price">£12.50 each</div>
+          <button>Add to Basket</button>
+        </div>
+        <div class="related-card">
+          <img src="placeholder-220x220.png" alt="Blue Centrefeed Rolls" loading="lazy" width="220" height="220" />
+          <h3>Blue Centrefeed Rolls 1ply – 6x300m</h3>
+          <div class="price">£22.75 / Case</div>
+          <button>Add to Basket</button>
+        </div>
       </div>
     </div>
   </div>

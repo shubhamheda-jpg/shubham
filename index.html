@@ -17,6 +17,8 @@
     .usp { background: #f7f7f7; padding: 10px 15px; border-radius: 5px; font-size: 0.95em; flex: 1; text-align: center; min-width: 120px; }
     .price { font-size: 1.6em; color: #004080; font-weight: bold; margin-bottom: 10px; }
     .sku { margin-bottom: 15px; font-size: 0.95em; color: #666; }
+
+    /* Action buttons redesigned */
     .cta { margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap; }
     .cta-primary { background: #004080; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; flex: 1; text-align: center; }
     .cta-primary:hover { background: #0066cc; }
@@ -27,6 +29,8 @@
     .cta-dropdown-content a:last-child { border-bottom: none; }
     .cta-dropdown-content a:hover { background: #f9f9f9; }
     .cta-dropdown:hover .cta-dropdown-content { display: block; }
+
+    /* Accordion styles */
     .accordion { margin-top: 40px; border-top: 1px solid #ddd; }
     .accordion-item { border-bottom: 1px solid #ddd; }
     .accordion-header { cursor: pointer; padding: 15px; font-weight: bold; background: #f9f9f9; display: flex; justify-content: space-between; align-items: center; }
@@ -34,12 +38,16 @@
     .accordion-content { display: none; padding: 15px; background: #fff; }
     .accordion-header span { font-weight: bold; font-size: 1.2em; }
     .accordion-item.active .accordion-content { display: block; }
+
+    /* B2B tools redesign */
     .b2b-tools { margin-top: 40px; background: #f7f7f7; padding: 20px; border-radius: 8px; }
     .b2b-tools h2 { margin-bottom: 15px; font-size: 1.3em; }
     .b2b-grid { display: flex; gap: 20px; flex-wrap: wrap; }
     .b2b-card { background: #fff; border: 1px solid #ddd; border-radius: 6px; flex: 1; min-width: 220px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
     .b2b-card a { text-decoration: none; color: #004080; font-weight: bold; display: block; }
     .b2b-card a:hover { text-decoration: underline; }
+
+    /* Related Products */
     .related-products { margin-top: 40px; }
     .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
     .related-card { border: 1px solid #ddd; border-radius: 6px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); background: #fff; }
@@ -48,25 +56,58 @@
     .related-card .price { font-size: 1.1em; color: #004080; font-weight: bold; margin-bottom: 10px; }
     .related-card button { background: #004080; color: #fff; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 0.9em; }
     .related-card button:hover { background: #0066cc; }
+    /* Responsive: Mobile tweaks */
+    @media (max-width: 768px) {
+      .container { width: 94%; padding: 12px; }
+      .product-page { grid-template-columns: 1fr; gap: 20px; }
+      .product-title { font-size: 1.4em; }
+      .subtitle { font-size: 1em; }
+      .usp-bar { flex-direction: column; gap: 10px; }
+      .usp { min-width: auto; text-align: left; }
+      .price { font-size: 1.3em; }
+      .sku { font-size: 0.9em; }
+      .cta { flex-direction: column; gap: 10px; }
+      .cta-primary, .cta-secondary { width: 100%; }
+      .accordion-header { padding: 14px; font-size: 1em; }
+      .accordion-content { padding: 12px; }
+      .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .related-card { padding: 12px; }
+      .related-card h3 { font-size: 0.95em; }
+      .related-card .price { font-size: 1em; }
+    }
+
+    @media (max-width: 420px) {
+      .product-title { font-size: 1.25em; }
+      .price { font-size: 1.15em; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="breadcrumbs">Home → Cleaning & Hygiene → Hygiene Paper → Centrefeed Rolls</div>
+
     <div class="product-page">
+      <!-- Product Images -->
       <div class="product-images">
         <img src="placeholder-1000x1000.png" alt="Mini Centrefeed Rolls 1ply White bulk hygiene paper" />
       </div>
+
+      <!-- Product Details -->
       <div>
         <div class="product-title">Mini Centrefeed Rolls 1ply White – 12x126m</div>
         <div class="subtitle">Food-Safe CHSA Accredited Hygiene Paper for Commercial Use</div>
+
+        <!-- USP bar -->
         <div class="usp-bar">
           <div class="usp">✔ Made in the UK</div>
           <div class="usp">✔ Food Safe Certified</div>
           <div class="usp">✔ CHSA Accredited</div>
         </div>
+
         <div class="price">£26.53 / Case (excl. VAT)</div>
         <div class="sku">Product Code: 121502 | Pack Size: 12 Rolls</div>
+
         <div class="cta">
           <button class="cta-primary">Add to Basket</button>
           <div class="cta-dropdown">
@@ -80,15 +121,27 @@
         </div>
       </div>
     </div>
+
+    <!-- Accordion Section -->
     <div class="accordion">
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Description <span>+</span></div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+          Description <span>+</span>
+        </div>
         <div class="accordion-content">
-          <p>The Mini Centrefeed Rolls 1ply White (12x126m) are a cost-effective, hygienic solution for commercial environments such as kitchens, salons, schools, hospitals, and government institutions. Produced in the UK and accredited by CHSA, these rolls are food-safe, highly absorbent, and easy to tear. Each case contains 12 rolls, shrink-wrapped for protection and suitable for most mini centrefeed dispensers.</p>
+          <p>
+            The Mini Centrefeed Rolls 1ply White (12x126m) are a cost-effective, hygienic solution for
+            commercial environments such as kitchens, salons, schools, hospitals, and government institutions.
+            Produced in the UK and accredited by CHSA, these rolls are food-safe, highly absorbent, and easy to tear.
+            Each case contains 12 rolls, shrink-wrapped for protection and suitable for most mini centrefeed dispensers.
+          </p>
         </div>
       </div>
+
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Features <span>+</span></div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+          Features <span>+</span>
+        </div>
         <div class="accordion-content">
           <ul>
             <li>Manufactured in the UK</li>
@@ -99,8 +152,11 @@
           </ul>
         </div>
       </div>
+
       <div class="accordion-item">
-        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">Specifications <span>+</span></div>
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+          Specifications <span>+</span>
+        </div>
         <div class="accordion-content">
           <table>
             <tr><th>UNSPSC Code</th><td>14111703</td></tr>
@@ -114,13 +170,21 @@
         </div>
       </div>
     </div>
+
+    <!-- B2B Tools -->
     <div class="b2b-tools">
       <h2>B2B Resources</h2>
       <div class="b2b-grid">
-        <div class="b2b-card"><a href="#">Download Product Datasheet (PDF)</a></div>
-        <div class="b2b-card"><a href="#">View Compliance Certificates</a></div>
+        <div class="b2b-card">
+          <a href="#">Download Product Datasheet (PDF)</a>
+        </div>
+        <div class="b2b-card">
+          <a href="#">View Compliance Certificates</a>
+        </div>
       </div>
     </div>
+
+    <!-- Related Products -->
     <div class="related-products">
       <h2>Related Products</h2>
       <div class="related-grid">

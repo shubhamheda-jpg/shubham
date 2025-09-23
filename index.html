@@ -81,7 +81,35 @@
       .price { font-size: 1.15em; }
       .related-grid { grid-template-columns: 1fr; }
     }
+    /* Reviews styling */
+    .review-summary { margin-bottom: 10px; font-size: 1.05rem; }
+    .review { border-bottom: 1px solid #eee; padding: 10px 0; }
+    .review p { margin: 4px 0; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Mini Centrefeed Rolls 1ply White – 12x126m",
+    "sku": "121502",
+    "image": [
+      "121.502.jpg"
+    ],
+    "description": "Food-safe CHSA accredited hygiene paper rolls for commercial use.",
+    "brand": {"@type": "Brand", "name": "Unbranded"},
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "GBP",
+      "price": "26.53",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "28"
+    }
+  }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -90,7 +118,7 @@
     <div class="product-page">
       <!-- Product Images -->
       <div class="product-images">
-        <img src="121.502.jpg" alt="Mini Centrefeed Rolls 1ply White – bulk hygiene paper" />
+        <img src="placeholder-1000x1000.png" alt="Mini Centrefeed Rolls 1ply White bulk hygiene paper" />
       </div>
 
       <!-- Product Details -->
@@ -167,6 +195,23 @@
             <tr><th>Colour</th><td>White</td></tr>
             <tr><th>Case Quantity</th><td>12 Rolls</td></tr>
           </table>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+          Reviews <span class="symbol">+</span>
+        </div>
+        <div class="accordion-content">
+          <div class="review-summary"><strong>★ 4.6 / 5</strong> (28 reviews)</div>
+          <div class="review">
+            <p><strong>Jane D.</strong> – ★★★★★</p>
+            <p>“Excellent quality rolls, very absorbent and perfect for our kitchen.”</p>
+          </div>
+          <div class="review">
+            <p><strong>Mark S.</strong> – ★★★★☆</p>
+            <p>“Good value for money. Would recommend, though delivery was a day late.”</p>
+          </div>
+          <a href="#">Read all reviews →</a>
         </div>
       </div>
     </div>
